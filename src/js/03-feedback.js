@@ -45,3 +45,4 @@ const updateFormDataThrottled = throttle(saveFormData, 500);
 window.addEventListener('load', loadFormData);
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('input', updateFormDataThrottled);
+
