@@ -39,7 +39,6 @@ function handleSubmit(event) {
   clearFormData();
 }
 
-
 const updateFormDataThrottled = throttle(saveFormData, 500);
 
 window.addEventListener('load', loadFormData);
