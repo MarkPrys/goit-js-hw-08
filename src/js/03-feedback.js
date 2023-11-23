@@ -22,6 +22,8 @@ function loadFormData() {
 
 function clearFormData() {
   localStorage.removeItem(localStorageKey);
+  form.elements.email.value = '';
+  form.elements.message.value = '';
 }
 
 function handleSubmit(event) {
@@ -37,10 +39,9 @@ function handleSubmit(event) {
   clearFormData();
 }
 
+
 const updateFormDataThrottled = throttle(saveFormData, 500);
 
 window.addEventListener('load', loadFormData);
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('input', updateFormDataThrottled);
-
-browserslist.clearCaches()
